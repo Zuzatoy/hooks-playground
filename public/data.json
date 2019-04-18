@@ -1,0 +1,46 @@
+{
+    "user": {
+        "name": "Lisa Serous"
+    },
+    "companies":
+        {
+            "id": "c-1",
+            "name": "CBD",
+            "coordinates": [-36.847981, 174.757916],
+            "organizations": [
+                {
+                    "id": "Company-1",
+                    "name": "Less Mills",
+                    "address": "186 Victoria St W, Auckland, 1010",
+                    "value": "keep people fit",
+                    "coordinates": [
+                        [-36.847962, 174.757284],
+                        [-36.847151, 174.757091],
+                        [-36.847014, 174.758094],
+                        [-36.847830, 174.758271]
+                    ],
+                    "people": [
+                        {"name": "Gendalf Archer"},
+                        {"name": "Lisa Osbort"}
+                    ]
+                },
+                {
+                    "id": "Company-2",
+                    "name": "Spark NZ",
+                    "address": "167 Victoria St W, Auckland, 1010",
+                    "value": "keep people busy",
+                    "coordinates": [
+                        [-36.848478, 174.757997],
+                        [-36.848521, 174.757707],
+                        [-36.848158, 174.757616],
+                        [-36.848113, 174.757924]
+                    ],
+                    "people": [
+                        {"name": "Lisa Serous"},
+                        {"name": "Emma Eshley"},
+                        {"name": "Egor Mityev"}
+                    ]
+                }
+            ]     
+        }
+}

@@ -1,28 +1,43 @@
-import React, { Component } from 'react';
-import logo from './logo.svg';
-import './App.css';
+import React, { Component } from "react";
+import Gallery from './Todo/Gallery';
+import Counter from './Todo/Counter';
+import MapCompany from './Todo/Map/MapCompany';
+import CounterClass from './Todo/CounterClass';
+import CounterFunction from './Todo/CounterFunction';
 
+export const ApplicationContext = React.createContext();
 class App extends Component {
-  render() {
-    return (
-      <div className="App">
-        <header className="App-header">
-          <img src={logo} className="App-logo" alt="logo" />
-          <p>
-            Edit <code>src/App.js</code> and save to reload.
-          </p>
-          <a
-            className="App-link"
-            href="https://reactjs.org"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            Learn React
-          </a>
-        </header>
-      </div>
-    );
-  }
+    state = {
+      name: '',
+      checked: false,
+    };
+
+    onNameChange = (e) => {
+
+    console.log(this.state);
+        this.setState({name: e.target.value})
+    };
+
+    onClick = (e) => {
+        this.setState({checked: !e.target.checked})
+    };
+
+    render() {
+        return (
+        <div>
+        <ApplicationContext.Provider 
+            value={{...this.state,
+                onChange:this.onNameChange,
+                onClick:this.onClick }}>
+            <Gallery />
+            <Counter />
+            <MapCompany />
+            <CounterClass />
+            <CounterFunction />
+        </ApplicationContext.Provider>
+        </div>
+        )
+    }
 }
 
 export default App;
